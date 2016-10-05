@@ -24,7 +24,7 @@ class CachesCommand extends Command
 
     public function configure()
     {
-        $this->setName('caches')
+        $this->setName('cache')
             ->setDescription('Run php artisan' . Helper::stringfyArray($this->commandList));
 
     }
