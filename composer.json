@@ -16,5 +16,6 @@
     "psr-4": {
       "Edujugon\\LaravelCachesCleaner\\": "src"
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
