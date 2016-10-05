@@ -13,18 +13,24 @@ The best and faster way to clean all caches and restart queue to your project.
 
 #### Clean caches
 ```
-./cleaner cache
+./vendor/edujugon/laravel-caches-cleaner/cleaner cache
 
 ```
 
 #### Clean queue
 ```
-./cleaner queue
+./vendor/edujugon/laravel-caches-cleaner/cleaner queue
 
 ```
 
 #### Clean all
 ```
-./cleaner all
+./vendor/edujugon/laravel-caches-cleaner/cleaner all
+
+```
+
+#### Package Command List
+```
+./vendor/edujugon/laravel-caches-cleaner/cleaner list
 
 ```
