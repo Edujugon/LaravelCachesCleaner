@@ -1,0 +1,54 @@
+#! /usr/bin/env php
+
+<?php
+
+use Edujugon\LaravelCachesCleaner\AllCommand;
+use Edujugon\LaravelCachesCleaner\CachesCommand;
+use Edujugon\LaravelCachesCleaner\QueueCommand;
+use Symfony\Component\Console\Application;
+
+require __DIR__.'/vendor/autoload.php';
+
+$app = new Application('Laravel Caches Cleaner','1.0');
+
+/**
+ * Package Commands
+ */
+$packageCommands = [
+    CachesCommand::class,
+    QueueCommand::class,
+    AllCommand::class
+];
+
+/**
+ * Add Commands into the application
+ */
+addCommands($app,$packageCommands);
+
+
+/**
+ * Run Application
+ */
+$app->run();
+
+
+/**
+ * Map all package commands and add them into the app
+ *
+ * @param $app
+ * @param $commands
+ */
+function addCommands($app,$commands)
+{
+    foreach ($commands as $command)
+    {
+        //Different behavior on AllCommand class.
+        if($command === AllCommand::class)
+        {
+            $app->add(new $command($commands));
+            continue;
+        }
+
+        $app->add(new $command);
+    }
+}
