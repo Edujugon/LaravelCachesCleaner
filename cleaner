@@ -7,7 +7,12 @@ use Edujugon\LaravelCachesCleaner\CachesCommand;
 use Edujugon\LaravelCachesCleaner\QueueCommand;
 use Symfony\Component\Console\Application;
 
-require __DIR__.'/../../autoload.php';
+/**
+ * If Laravel otherwise own package path.
+ */
+if(function_exists('config_path')) require __DIR__.'/../../autoload.php';
+else require './vendor/autoload.php';
+
 
 $app = new Application('Laravel Caches Cleaner','1.0');
 
@@ -42,7 +47,7 @@ function addCommands($app,$commands)
 {
     foreach ($commands as $command)
     {
-        //Different behavior on AllCommand class.
+        //Different behavior for AllCommand class.
         if($command === AllCommand::class)
         {
             $app->add(new $command($commands));

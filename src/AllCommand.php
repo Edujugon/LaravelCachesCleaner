@@ -32,7 +32,7 @@ class AllCommand extends Command
     public function configure()
     {
         $this->setName('all')
-            ->setDescription('Run All Package Commands');
+            ->setDescription('Run All Package Commands at once');
     }
 
     public function execute(InputInterface $input, OutputInterface $output)

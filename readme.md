@@ -1,12 +1,22 @@
 # Laravel Caches Cleaner Console Command Package
 
-The best and faster way to clean all caches and restart queue to your project.
+A fast way to clean all caches and restart queue to your project.
+
+Have you ever felt that your code changes don't take effect? If so, this package may help you out.
+ 
+## Installation
+
+type in console:
+
+```
+composer require edujugon/laravel-caches-cleaner
+```
 
 #### Available Commands:
 
 * cache => Run php artisan clear-compiled cache:clear config:cache view:clear
 * queue => Run php artisan queue:restart
-* all => Run All Package Commands
+* all => Run All Package Commands at onces
 * More coming soon.
 
 ### Usage
