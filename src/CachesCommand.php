@@ -19,6 +19,7 @@ class CachesCommand extends Command
         'clear-compiled',
         'cache:clear',
         'config:cache',
+        'config:clear',
         'view:clear'
     ];
 

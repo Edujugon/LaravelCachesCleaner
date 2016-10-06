@@ -14,7 +14,7 @@ composer require edujugon/laravel-caches-cleaner
 
 #### Available Commands:
 
-* cache => Run php artisan clear-compiled cache:clear config:cache view:clear
+* cache => Run php artisan clear-compiled cache:clear config:cache config:clear view:clear
 * queue => Run php artisan queue:restart
 * all => Run All Package Commands at onces
 * More coming soon.
